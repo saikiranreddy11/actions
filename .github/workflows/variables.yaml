@@ -24,7 +24,7 @@ jobs:
   deploy:
     concurrency: 
         group: wait_for_docker
-        cancel-in-progress: true
+        cancel-in-progress: false
     needs: docker
     runs-on: ubuntu-latest
     steps:
