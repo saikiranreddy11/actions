@@ -1,0 +1,36 @@
+name: Print Contexts Example
+
+on:
+  push:
+
+jobs:
+  print-contexts:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up jq
+      run: sudo apt-get install jq -y
+
+    - name: Print GitHub context
+      run: echo '${{ toJSON(github) }}' | jq .
+
+    - name: Print job context
+      run: echo '${{ toJSON(job) }}' | jq .
+
+    - name: Print runner context
+      run: echo '${{ toJSON(runner) }}' | jq .
+
+    - name: Print steps context (if applicable)
+      run: echo '${{ toJSON(steps) }}' | jq .
+
+    - name: Print matrix context (if applicable)
+      run: echo '${{ toJSON(matrix) }}' | jq .
+
+
+
+
+
+
