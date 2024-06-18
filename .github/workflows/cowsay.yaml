@@ -9,7 +9,7 @@ jobs:
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v4
-    - name: Checkout Repo Files
+    - name: Checkout Repo 
       run: ls -ltra
 
     - name: Execute ascii script
