@@ -15,7 +15,10 @@ jobs:
       run: sudo apt-get install jq -y
 
     - name: Print GitHub context
-      run: echo '${{ github }}' | jq .
+      run: echo '${{ toJSON(github) }}' | jq .
+
+    - name: Printing some github context
+      run: echo '${{ github.ref }}' | jq 
 
     - name: Print job context
       run: echo '${{ toJSON(job) }}' | jq .
