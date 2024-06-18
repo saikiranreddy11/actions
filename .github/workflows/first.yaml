@@ -14,11 +14,8 @@ jobs:
         - name: List files in workspace
           run: ls $GITHUB_WORKSPACE
         - name: welcome message
-          run: echo "Hello , this is first workflow"
-
-        - name: list files
-          run: ls
-
-        - name: read files
-          run: cat README.md
+          run: |
+            echo "Hello , this is first workflow"
+            ls
+            cat README.md
           
