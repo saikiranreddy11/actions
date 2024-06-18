@@ -8,6 +8,8 @@ jobs:
         steps:
         - name: Checkout repository
           uses: actions/checkout@v4
+        - name: List all environment variables
+          run: env
           
         - name: List files in workspace
           run: ls $GITHUB_WORKSPACE
