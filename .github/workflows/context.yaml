@@ -18,7 +18,7 @@ jobs:
       run: echo '${{ toJSON(github) }}' | jq .
 
     - name: Printing some github context
-      run: echo '${{ github.ref }}' | jq 
+      run: echo '${{ github.ref }}'
 
     - name: Print job context
       run: echo '${{ toJSON(job) }}' | jq .
